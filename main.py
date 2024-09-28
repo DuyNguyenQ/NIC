@@ -28,11 +28,11 @@ def run_process():
         while (amr.check_target(amr.data_Status,target= task[1]) == False):
             pass
         
-        amr.navigation(amr.navigation({
+        amr.navigation({
                         "id": task[0],
                         "source_id": "SELF_POSITION",
                         "task_id": id_generator(9)}
-                        ))
+                        )
         while (amr.check_target(amr.data_Status,target= task[0]) == False):
             pass
 def Poll_status():
