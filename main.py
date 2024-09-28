@@ -1,7 +1,7 @@
 from control import AMR_APi
 import random,string
 from threading import Thread
-
+import time
 
 task = ["LM1", "LM2"]
 
@@ -38,6 +38,7 @@ def run_process():
 def Poll_status():
     while True:
         amr.status(key=amr.keys)
+        time.sleep(1)
    
 
 if __name__ == "__main__":
