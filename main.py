@@ -35,7 +35,9 @@ def run_process():
                         ))
         while (amr.check_target(amr.data_Status,target= task[0]) == False):
             pass
-        
+def Poll_status():
+    while True:
+        amr.status(key=amr.keys)
    
 
 if __name__ == "__main__":
@@ -51,6 +53,8 @@ if __name__ == "__main__":
 
     
     task_run = Thread(target=run_process,args=())
+    task_status = Thread(target=Poll_status,args=())
     
     task_run.start()
+    task_status.start()
      

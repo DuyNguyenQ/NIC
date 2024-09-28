@@ -17,7 +17,11 @@ class AMR_APi:
         self.apiRobotOther      = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.apiRobotConfig      = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         self.apiRobotControl      = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
+        self.keys = {
+        "keys":["vehicle_id","area_ids","confidence","current_station","last_station","vx","vy","blocked","block_reason","battery_level","task_status","target_id","emergency","reloc_status","fatals","errors","warnings","notices","current_ip",'x','y','fork_height',"current_map","angle"],
+        "return_laser":False,
+        "return_beams3D":False
+        }
         self.data_Status={}
     
     def connect_status(self):
